@@ -1,0 +1,15 @@
+services:
+  sovits-wyoming-connector:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "10200:10200"
+    environment:
+      WYOMING_URI: tcp://0.0.0.0:10200
+      SOVITS_URL: http://host.docker.internal:9880/tts
+      SOVITS_REF_AUDIO_PATH: /data/ref.wav
+      SOVITS_PROMPT_LANG: ko
+      SOVITS_TEXT_LANG: ko
+      SOVITS_PROMPT_TEXT: ""
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

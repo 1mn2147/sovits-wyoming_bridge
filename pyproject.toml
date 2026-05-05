@@ -1,0 +1,28 @@
+[project]
+name = "sovits-wyoming-connector"
+version = "0.1.0"
+description = "Wyoming TTS bridge for GPT-SoVITS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.9,<4",
+    "wyoming>=1.8,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9,<10",
+]
+
+[project.scripts]
+sovits-wyoming-connector = "sovits_wyoming_connector.__main__:run"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["sovits_wyoming_connector*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
