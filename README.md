@@ -25,6 +25,7 @@ GPT-SoVITS의 `/tts` 요청에는 최소한 `text`, `text_lang`, `ref_audio_path
 
 ```bash
 python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 .venv/bin/pip install -e .
 .venv/bin/sovits-wyoming-connector \
   --uri tcp://0.0.0.0:10200 \
@@ -87,3 +88,17 @@ python api_v2.py -a 0.0.0.0 -p 9880 -c GPT_SoVITS/configs/tts_infer.yaml
 
 이후 `/tts`가 `HTTP 200`으로 WAV를 반환해야 합니다. 실패 시 브릿지는 Wyoming `error` 이벤트를 반환합니다.
 - `ref_audio_path`는 브릿지 경로가 아니라 GPT-SoVITS 프로세스 기준 파일 경로여야 합니다.
+
+## Acknowledgments
+
+This project is a bridge connecting the following open-source projects:
+
+- GPT-SoVITS (MIT License): https://github.com/RVC-Boss/GPT-SoVITS
+- Wyoming protocol (MIT License): https://github.com/OHF-Voice/wyoming
+
+Special thanks to the original authors and maintainers.
+
+## License
+
+This project is licensed under the MIT License.
+See [LICENSE](LICENSE).

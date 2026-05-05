@@ -1,0 +1,9 @@
+This repository provides a bridge between GPT-SoVITS and Wyoming protocol APIs.
+
+It is built to work with these upstream open-source projects:
+- GPT-SoVITS (MIT License): https://github.com/RVC-Boss/GPT-SoVITS
+- Wyoming protocol/reference implementations (MIT License): https://github.com/OHF-Voice/wyoming
+
+This project does not bundle copied source files from those repositories.
+If copied code is added in future, the original license headers and notices
+must be retained.

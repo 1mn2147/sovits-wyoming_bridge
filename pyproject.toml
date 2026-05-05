@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Wyoming TTS bridge for GPT-SoVITS"
 readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "MIT"}
 dependencies = [
     "aiohttp>=3.9,<4",
     "wyoming>=1.8,<2",
